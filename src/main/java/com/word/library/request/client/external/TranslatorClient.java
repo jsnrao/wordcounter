@@ -10,7 +10,7 @@ public class TranslatorClient {
     private static final Map<String, String> words;
 
     static {
-        words = new HashMap<String, String>();
+        words = new ConcurrentHashMap<>();
         words.put("flor","flower");
         words.put("blume","flower");
     }
