@@ -29,7 +29,7 @@ public class WordRepositoryStub implements WordRepository {
 
     public static synchronized Map<String, Integer> getMap() {
         if (words == null) {
-            words = new HashMap<>();
+            words = new ConcurrentHashMap<>();
         }
         return words;
     }
